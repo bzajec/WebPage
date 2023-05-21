@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/NovostSredina.css">
+    <link rel="stylesheet" href="/AWSOME/css/all.min.css">
+    <title>Supit-Projektni Zadatak</title>
+</head>
+<header>
+    <img src="Materijali/img/Algebra-logo.png" alt="logo" class="logo" width="70" height="70">
+    <nav>
+        <ul>
+            <li><a href="Pocetna.html"><i class="fas fa-home"></i> Početna</a></li>
+            <li><a href="Onama.html"><i class="fas fa-comments"></i> O nama</a></li>
+            <li><a href="Novosti.html"><i class="fas fa-info-circle"></i> Novosti</a></li>
+            <li><a href="NastavniPlan.html"><i class="fas fa-info-circle"></i> Nastavni plan</a></li>
+            <li><a id="Kontakt" href="#"><i class="fas fa-envelope"></i> Kontakt</a></li>
+        </ul>
+    </nav>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+</header>
+<body>
+    <div class="TekstNaSlici">
+        <center>
+            <h1 class="TekstCentar">Nagrađujemo izvrsnost: Objavljujemo dobitnike <br> stipendijskog natječaja šk.god. 2018./2019.!
+            </h1>
+        </center>
+    </div>
+    <center class="Novosti">Stipendijski natječaja šk.god. 2018./2019.</center>
+    <hr class="linija" size="5" color="DarkGoldenRod">
+    <div class="TekstNovosti">
+        <p> Nakon velikog broja prijava koje smo primili, detaljnom
+            analizom i provjerom utvrdili smo dobitnike ovogodišnjeg
+            stipendijskog natječaja za maturante! Stipendiju u
+            vrijednosti od 10.000,00 kuna na potrošačkoj kartici
+            dobivaju: Heidi Sokolovski iz Zagreba - za najbolji
+            rezultat iz Matematike na A razini osvojila je
+            stipendiju u iznosu od 10.000,00 kn. Tereza Žugaj iz
+            Zagreba - za najbolji rezultat iz Matematike na B razini
+            osvojila je stipendiju u iznosu od 10.000,00 kn. Dalija
+            Romac iz Sinja - za najbolji rezultat iz Hrvatskog
+            jezika na A razini te dodatna 204 boda za rezultat iz
+            Matematike A i Engleskog jezika A osvojila je stipendiju
+            u iznosu od 10.000,00 kn. Ella Milinović iz Zagreba - za
+            najbolji rezultat iz Hrvatskog jezika na B razini
+            osvojila je stipendiju u iznosu od 10.000,00 kn. Borna
+            Skračić iz Zadra – za najbolji rezultat iz Engleskog
+            jezika na A razini osvojio je stipendiju u iznosu od
+            10.000,00 kn. Lukas Božić iz Umaga - za najbolji
+            rezultat iz Engleskog jezika na B razini osvojio je
+            stipendiju u iznosu od 10.000,00 kn.
+        </p>
+    </div>
+    <div class="bg-modal">
+        <div class="modal-content">
+            <h2> <i class="fas fa-envelope"></i> Kontaktirajte nas </h2>
+            <form class="forma" action="http://www.fulek.com/VUA/SUPIT/ContactUs">
+                <label for="name">Puno ime:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="importance">Važnost poruke:</label>
+                <select id="importance" name="importance">
+                    <option value="Visoka">Visoka</option>
+                    <option value="Niska">Niska</option>
+                </select>
+                <label for="message">Vaša poruka:</label>
+                <textarea id="message" name="message" cols="30" rows="10"></textarea>
+                <label for="newsletter  ">Prijavi se na newsletter:</label>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <div class="buttons">
+                    <input type="submit" class="submit" value="Pošalji">
+                    <input type="button" id="reject" class="reject" value="Odustani">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('Kontakt').addEventListener('click', function () {
+            document.querySelector('.bg-modal').style.display = 'flex'
+        });
+        document.getElementById('reject').addEventListener('click', function () {
+            document.querySelector('.bg-modal').style.display = 'none'
+        });
+    </script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.menu-toggle').click(function () {
+                    $('nav').toggleClass('active')
+                })
+            })
+        </script>
+</body>
+<footer>
+</footer>
+</html>

@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  
+    background: transparent;  
+}
+header{
+    width: 100%;
+    height: 5vh;
+    background: black;
+    display: table;
+    clear: both;
+    position: sticky;
+    z-index: 1;
+}
+.logo{
+    float: left;
+    padding: 15px;
+    margin-left: 55px;
+}
+nav{
+    float: left;
+}
+nav ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+  
+}
+nav li{
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 40px;
+    font-weight: bold;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    
+}
+nav a:hover{
+    color: yellow;
+}
+
+.fa-info-circle,.fa-envelope,.fa-home,.fa-comments{
+    color: #cea32e;
+}
+.TekstNaSlici{
+    background-image: url(/Materijali/img/novost3.jpg);
+     width: 100%;
+     height: 33vh;
+     animation: transitionIn 1.2s;
+     background-size: cover;
+     z-index: -1;
+     display: flex;
+     flex-direction: initial;
+     justify-content: center;
+ }
+ @keyframes transitionIn{
+     from{
+         
+         transform: translateY(-600px);
+     }
+     to{
+         
+         transform: translateY(0);
+     }
+ }
+ .linija{
+     width: 60%;
+     margin-left: 20%;
+     animation: transitionIn2 1.2s;
+ }
+ .Novosti{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    animation: transitionIn2 1.2s;
+    font-weight: bolder;
+}
+@keyframes transitionIn2{
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.TekstNovosti{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 4em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color:rgb(90, 90, 90);
+    animation: Opacity 1.2s;
+}
+@keyframes Opacity{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+footer{
+    background-image: url(/Materijali/img/zaiskri-bg.jpg);
+    width: 98%;
+    height: 5vh;
+    padding-right: 38.5px; 
+    background-position: 50% 30%;  
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.modal-content{
+    width: 500px;
+    height: 550px;
+    background-color: white;
+    border-radius: 4px;
+}
+.modal-content i{
+    color: lightskyblue;
+}
+.modal-content h2{
+    padding: 10px 20px;
+}
+input{
+    width: 70%;
+    margin: 10px 10%;
+    display: block;
+}
+label{
+    margin-left: 10%;
+}
+
+select{
+    width: 70.5%;
+    margin: 10px 10%;
+}
+textarea{
+    margin: 10px 10%;
+    width: 70.5%;
+}
+.buttons{
+    display: flex;
+    flex-direction: initial;
+    justify-content: left;
+}
+.submit{
+    color: white;
+    background-color: lightskyblue;
+    text-shadow: black 1px 1px;
+    border-radius: 4px;
+}
+.reject{
+    color: white;
+    background-color: red;
+    text-shadow: black 1px 1px;
+    border-radius: 4px;
+}
+.menu-toggle{
+    color: #fff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width:1200px){
+    header{
+        height: 6em;
+    }
+    header nav{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: 15%;
+    }
+    footer{
+        display: none;
+    }
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
+@media (max-width:767px){
+    header{
+        height: 20px;
+    }
+    .menu-toggle{
+        display: block;
+        margin-right: 10%;
+    }
+    header nav{
+        position: absolute;
+        width:100% ;
+        height: 100vh;
+        background: #333;
+        top: 50px;
+        left: -120%;
+        transition: 0.5s;
+        z-index: 20;
+    }
+    header nav.active{
+        left:-15% ;
+    }
+    .logo{
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    header nav ul li a{
+        border-bottom: 1px solid rgb(0, 0, 0,.2);
+    }
+    .SlikaSTekstom{
+        background-position: center;
+    }
+    .bg-modal{
+        z-index: 21;
+    }
+}
